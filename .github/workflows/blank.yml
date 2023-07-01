@@ -25,9 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v4.1.1
-        with:
-          file: ./Dockerfile
-          # List of tags
-          tags: ob-1
+#       - name: Build and push Docker images
+#         uses: docker/build-push-action@v4.1.1
+#         with:
+#           file: ./Dockerfile
+#           # List of tags
+#           tags: ob-1
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag ob-run:$(date +%s)
