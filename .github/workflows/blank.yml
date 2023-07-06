@@ -38,7 +38,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
         with:
-          driver-opts: image=moby/buildkit:buildx-stable-1-rootless
+          driver: docker
         
       - name: Build and push
         uses: docker/build-push-action@v4
