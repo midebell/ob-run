@@ -19,6 +19,13 @@ jobs:
     runs-on: arc-runner-set
     container:
       image: ubuntu:22.04
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
+      volumes:
+        - my_docker_volume:/volume_mount
+      options: --cpus 1
     permissions:
       contents: read
       packages: write
