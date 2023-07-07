@@ -48,8 +48,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-#           push: true
-          tags: ob-run:v1
+          push: true
+          tags: node:v1
 
 # name: Docker Image CI
 
