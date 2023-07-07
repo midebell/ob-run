@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest #arc-runner-set
+    runs-on: arc-runner-set
     permissions:
       contents: read
       packages: write
@@ -30,13 +30,13 @@ jobs:
 
 #       - name: Build the Docker image
 #         run: docker build . --file Dockerfile --tag ob-run:$(date +%s)
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
+#       - name: Set up QEMU
+#         uses: docker/setup-qemu-action@v2
         
-      - name: Set up Docker Context for Buildx
-        id: buildx-contexts
-        run: |
-          docker context create builders
+#       - name: Set up Docker Context for Buildx
+#         id: buildx-contexts
+#         run: |
+#           docker context create builders
 
       - name: 'Login to GitHub Container Registry'
         uses: docker/login-action@v1
