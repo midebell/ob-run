@@ -49,7 +49,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ob-run:node-v1
+          tags: ghcr.io/midebell/ob-run:node-v1
 
 # name: Docker Image CI
 
